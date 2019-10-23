@@ -15,6 +15,10 @@
   "bin": {
     "verdaccio": "./bin/verdaccio"
   },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "@verdaccio/commons-api": "8.1.2",
     "@verdaccio/local-storage": "8.1.2",

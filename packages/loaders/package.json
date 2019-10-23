@@ -1,0 +1,10 @@
+{
+  "name": "@verdaccio/loaders",
+  "private": true,
+  "version": "4.4.0",
+  "description": "loaders logic",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
