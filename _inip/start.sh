@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker cp _inip/conf/config.yaml verdaccio:/verdaccio/conf/config.yaml
+docker cp _inip/conf/config.yaml verdaccio:/verdaccio-docker/conf/config.yaml
 docker rm -f verdaccio;
 
 V_PATH=/home/docker-user/verdaccio; docker run -d --name verdaccio \

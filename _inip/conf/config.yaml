@@ -47,9 +47,9 @@ auth:
 #             ignoreExpiration: true
 
 # a list of other known repositories we can talk to
-# uplinks:
-#     npmjs:
-#         url: https://registry.npmjs.org/
+uplinks:
+    npmjs:
+        url: https://registry.npmjs.org/
 
 packages:
   '@*/*':
@@ -57,7 +57,7 @@ packages:
     access: $authenticated
     publish: inip
     unpublish: inip
-    # proxy: npmjs
+    proxy: npmjs
 
   '**':
     # allow all users (including non-authenticated users) to read and
@@ -73,7 +73,7 @@ packages:
     unpublish: inip
 
     # if package is not available locally, proxy requests to 'npmjs' registry
-    # proxy: npmjs
+    proxy: npmjs
 
 # You can specify HTTP/1.1 server keep alive timeout in seconds for incoming connections.
 # A value of 0 makes the http server behave similarly to Node.js versions prior to 8.0.0, which did not have a keep-alive timeout.
