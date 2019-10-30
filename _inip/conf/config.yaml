@@ -48,8 +48,8 @@ auth:
 
 # a list of other known repositories we can talk to
 uplinks:
-    npmjs:
-        url: https://registry.npmjs.org/
+  npmjs:
+    url: https://registry.npmjs.org/
 
 packages:
   '@*/*':
@@ -65,7 +65,7 @@ packages:
     #
     # you can specify usernames/groupnames (depending on your auth plugin)
     # and three keywords: "$all", "$anonymous", "$authenticated"
-    access: inip
+    access: $authenticated
 
     # allow all known users to publish/publish packages
     # (anyone can register by default, remember?)

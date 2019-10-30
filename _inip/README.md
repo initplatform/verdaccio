@@ -79,7 +79,7 @@ then restart via `./_inip/start.sh`
 generate a new password
 
 ```bash
-htpasswd -m inip
+htpasswd -n inip
 ```
 
 Then copy that into /verdaccio/conf/htpasswd
@@ -91,4 +91,23 @@ _Note: As of Verdaccio 4.3.4 this appears broken. Do not use_
 ```bash
 npm login
 npm token list --registry https://npm.inip.dev:8443/
+```
+
+## Log in via postman/cli
+
+<https://github.com/verdaccio/verdaccio/issues/490>
+
+```bash
+curl -s \
+    -H "Accept: application/json" \
+    -H "Content-Type:application/json" \
+    -X PUT \
+    --data '{"name": "myusername", "password": "mypassword", "type": "user"}' \
+    --user myusername:mypassword http://mydomain.com:5000/-/user/org.couchdb.user:myusername 2>&1
+
+#or
+
+npm-cli-login -u david-at-blackrockdigital-dot-io -p tFjkmFvRri9R8e8LGCBU(BbkrxZCbTdq -e david@blackrockdigital.io -r http://mydomain.com:5000
+
+npm-cli-login -u username -p password -e emaily@mydomain.com -r https://npm.inip.dev:8443
 ```
